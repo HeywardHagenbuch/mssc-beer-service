@@ -13,6 +13,10 @@ public class BeerLoader implements CommandLineRunner {
 
     //CommandLine Runner will run every time the spring context is started
 
+    public static final String BEER_1_UPC = "0631234200036";
+    public static final String BEER_2_UPC = "0631234300019";
+    public static final String BEER_3_UPC = "0083783375213";
+
     private final BeerRepository beerRepository;
 
     public BeerLoader(BeerRepository beerRepository) {
@@ -31,7 +35,7 @@ public class BeerLoader implements CommandLineRunner {
                     .beerStyle("Pale Ale")
                     .quantityToBrew(200)
                     .minOnHand(12)
-                    .upc(337010000001L)
+                    .upc("337010000001")
                     .price(new BigDecimal("12.95"))
                     .build());
 
@@ -40,7 +44,7 @@ public class BeerLoader implements CommandLineRunner {
                     .beerStyle("Pale Ale")
                     .quantityToBrew(200)
                     .minOnHand(12)
-                    .upc(337010000002L)
+                    .upc("337010000002")
                     .price(new BigDecimal("11.95"))
                     .build());
         }
