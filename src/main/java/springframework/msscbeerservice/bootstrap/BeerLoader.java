@@ -35,17 +35,26 @@ public class BeerLoader implements CommandLineRunner {
                     .beerStyle("Pale Ale")
                     .quantityToBrew(200)
                     .minOnHand(12)
-                    .upc("337010000001")
+                    .upc(BEER_1_UPC)
                     .price(new BigDecimal("12.95"))
                     .build());
 
             beerRepository.save(Beer.builder()
                     .beerName("Galaxy Cat")
                     .beerStyle("Pale Ale")
-                    .quantityToBrew(200)
+                    .quantityToBrew(180)
                     .minOnHand(12)
-                    .upc("337010000002")
+                    .upc(BEER_2_UPC)
                     .price(new BigDecimal("11.95"))
+                    .build());
+
+            beerRepository.save(Beer.builder()
+                    .beerName("Heineken")
+                    .beerStyle("Lager")
+                    .quantityToBrew(150)
+                    .minOnHand(15)
+                    .upc(BEER_3_UPC)
+                    .price(new BigDecimal("9.95"))
                     .build());
         }
 
